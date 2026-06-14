@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product detail</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
 </head>
-<body>
+<body class="flex min-h-screen flex-col bg-gray-50 text-gray-900">
     <!-- Shared nav bar -->
     <header class="border-b bg-white">
         <nav class="mx-auto max-w-6xl px-4 py-4" aria-label="Main navigation">
@@ -41,5 +41,15 @@
             </ul>
         </nav>
     </header>
+
+    <main class="mx-auto w-full max-w-4xl flex-1 px-4 py-8">
+        <a href="home.html" class="mb-4 inline-block text-sm text-blue-600 hover:underline">&larr; Back to products</a>
+
+        <!-- detail content-->
+        <div id="product-detail" class="grid grid-cols-1 gap-8 md:grid-cols-2"></div>
+    </main>
+
+    <script src="../js/api.js"></script>
+    <script src="../js/product.js"></script>
 </body>
 </html>
