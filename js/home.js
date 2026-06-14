@@ -196,7 +196,11 @@ function initHomePage() {
             // navigate to details page for this product
             window.location.href = `product.html?id=${id}`;
         } else if (button.dataset.action === "add") {
-            // add to cart later
+            const product = state.allProducts.find((p) => p.id === id);
+            if (product) {
+                addToCart(product);
+                showToast(`Added "${product.title.slice(0, 30)}..." to cart`);
+            }
         }
     });
 
