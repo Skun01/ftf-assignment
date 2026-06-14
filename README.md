@@ -1,1 +1,1 @@
-Anh mở file index.html
+Anh mở file index.html la xong
