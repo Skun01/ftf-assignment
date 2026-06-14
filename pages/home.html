@@ -8,6 +8,39 @@
     <link rel="stylesheet" href="../css/style.css" />
 </head>
 <body>
+    <!-- Shared nav bar -->
+    <header class="border-b bg-white">
+        <nav class="mx-auto max-w-6xl px-4 py-4" aria-label="Main navigation">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="text-xl font-bold">ShopLite</a>
+
+                <div class="flex items-center gap-4">
+                <!-- Cart link with live count badge (always visible) -->
+                    <a href="cart.html" class="relative inline-flex items-center" aria-label="Cart">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                        <span class="cart-badge absolute -right-2 -top-2 hidden min-w-[1.25rem] rounded-full bg-blue-600 px-1 text-center text-xs font-bold leading-5 text-white">0</span>
+                    </a>
+
+                    <!-- Mobile menu toggle (hidden on md+ screens) -->
+                    <button id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu"
+                        class="md:hidden" aria-label="Toggle navigation">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Collapsible menu: row on desktop, stacked + hidden by default on mobile -->
+            <ul id="nav-menu" class="mt-4 hidden flex-col gap-4 text-sm md:mt-0 md:flex md:flex-row md:items-center md:gap-6">
+                <li><a href="home.html" class="hover:text-blue-600">Home</a></li>
+                <li><a href="cart.html" class="hover:text-blue-600">Cart</a></li>
+                <li><a href="register.html" class="hover:text-blue-600">Register</a></li>
+            </ul>
+        </nav>
+    </header>
     
 </body>
 </html>
