@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
 </head>
 <body>
     <!-- Shared nav bar -->
@@ -41,5 +41,77 @@
             </ul>
         </nav>
     </header>
+
+    <main class="mx-auto w-full max-w-md flex-1 px-4 py-8">
+        <h1 class="mb-6 text-2xl font-bold">Create an account</h1>
+
+        <form id="register-form" class="space-y-4" novalidate>
+            <!-- Full name -->
+            <div>
+                <label for="name" class="mb-1 block text-sm font-medium">Full name</label>
+                <input id="name" name="name" type="text" autocomplete="name"
+                class="w-full rounded-lg border border-gray-300 px-3 py-2 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500" />
+                <p class="mt-1 text-sm text-red-600" data-error="name"></p>
+            </div>
+
+            <!-- Email -->
+            <div>
+                <label for="email" class="mb-1 block text-sm font-medium">Email</label>
+                <input id="email" name="email" type="email" autocomplete="email"
+                class="w-full rounded-lg border border-gray-300 px-3 py-2 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500" />
+                <p class="mt-1 text-sm text-red-600" data-error="email"></p>
+            </div>
+
+            <!-- Password -->
+            <div>
+                <label for="password" class="mb-1 block text-sm font-medium">Password</label>
+                <input id="password" name="password" type="password" autocomplete="new-password"
+                class="w-full rounded-lg border border-gray-300 px-3 py-2 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500" />
+                <p class="mt-1 text-sm text-red-600" data-error="password"></p>
+            </div>
+
+            <!-- Phone -->
+            <div>
+                <label for="phone" class="mb-1 block text-sm font-medium">Phone number</label>
+                <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="numeric"
+                class="w-full rounded-lg border border-gray-300 px-3 py-2 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500" />
+                <p class="mt-1 text-sm text-red-600" data-error="phone"></p>
+            </div>
+
+            <!-- Topic (select) -->
+            <div>
+                <label for="topic" class="mb-1 block text-sm font-medium">Contact topic</label>
+                <select id="topic" name="topic"
+                  class="w-full rounded-lg border border-gray-300 px-3 py-2 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500">
+                    <option value="">-- Please choose --</option>
+                    <option value="general">General question</option>
+                    <option value="order">Order support</option>
+                    <option value="partnership">Partnership</option>
+                </select>
+                <p class="mt-1 text-sm text-red-600" data-error="topic"></p>
+            </div>
+
+            <!-- Terms checkbox -->
+            <div>
+                <label class="flex items-start gap-2 text-sm">
+                    <input id="terms" name="terms" type="checkbox" class="mt-0.5" />
+                    <span>I agree to the terms and conditions.</span>
+                </label>
+                <p class="mt-1 text-sm text-red-600" data-error="terms"></p>
+            </div>
+
+            <button type="submit" class="w-full rounded-lg bg-blue-600 px-4 py-3 font-medium text-white hover:bg-blue-700">
+                Register
+            </button>
+
+            <!-- Success message (revealed by register.js on valid submit) -->
+            <p id="form-success" class="hidden rounded-lg bg-green-50 p-3 text-center text-sm font-medium text-green-700"
+                role="status">
+                Registration successful! Welcome to ShopLite.
+            </p>
+        </form>
+    </main>
+
+    <script src="../js/register.js"></script>
 </body>
 </html>
